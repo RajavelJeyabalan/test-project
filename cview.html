@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client view</title>
+</head>
+<body>
+
+<h3>Client Information</h3>
+<table border=5>
+    <thead>
+        <td>Id</td>
+        <td>Name</td>
+        <td>GSTid</td>
+        <td>Address</td>
+        <td>Contact</td>
+        <td>Email</td>
+        <td>Website</td>
+    </thead>
+
+    {% for row in rows %}
+
+        <tr>
+            <td>{{row["Id"]}}</td>
+            <td>{{row["Name"]}}</td>
+            <td>{{row["GSTid"]}}</td>
+            <td>{{row["Address"]}}</td>
+            <td>{{row["Contact"]}}</td>
+            <td>{{row["Email"]}}</td>
+            <td>{{row["Website"]}}</td>
+        </tr>
+
+    {% endfor %}
+</table>
+<br><br>
+
+<a href="/">Go back to home page</a>
+
+</body>
+</html>
